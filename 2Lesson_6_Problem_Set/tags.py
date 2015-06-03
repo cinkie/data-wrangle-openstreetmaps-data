@@ -25,7 +25,7 @@ problemchars = re.compile(r'[=\+/&<>;\'"\?%#$@\,\. \t\r\n]')
 
 def key_type(element, keys):
     if element.tag == "tag":
-        # YOUR CODE HERE
+        # check the types of keys
         string = element.attrib['k']
         if lower.search(string):
             keys['lower'] += 1

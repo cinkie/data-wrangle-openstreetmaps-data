@@ -104,6 +104,7 @@ def shape_element(element):
 
         node['id'] = element.attrib['id']
         node['type'] = element.tag
+        
         if 'visible' in element.attrib.keys():
             node['visible'] = element.attrib['visible']
         if 'lat' in element.attrib.keys():
@@ -115,10 +116,11 @@ def shape_element(element):
             
         address = {}
         for tag in element.iter('tag'):
+            # if has problem characters, drop the document
             if problemchars.search(tag.attrib['k']):
                 continue
             elif tag.attrib['k'][:5] == "addr:":
-                # contain the second :
+                # drop the document that contains a second colon
                 if ':' in tag.attrib['k'][5:]:
                     continue
                 else:

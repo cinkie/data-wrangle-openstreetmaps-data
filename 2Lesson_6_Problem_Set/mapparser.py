@@ -21,6 +21,7 @@ def count_tags(filename):
         root = tree.getroot()
         index = ['bounds','member','nd','node','osm','relation','tag','way']
         tags = {}
+        # count the number of tags for each tag
         for i in index:
             count = 0
             for j in root.iter(i):

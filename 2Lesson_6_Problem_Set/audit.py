@@ -25,6 +25,7 @@ expected = ["Street", "Avenue", "Boulevard", "Drive", "Court", "Place", "Square"
             "Trail", "Parkway", "Commons"]
 
 # UPDATE THIS VARIABLE
+# According to st_types, these are the street types needed to be replaced
 mapping = { "St": "Street",
             "St.": "Street",
             "Ave": "Avenue",
@@ -60,9 +61,11 @@ def audit(osmfile):
 def update_name(name, mapping):
 
     # YOUR CODE HERE
-    # find street prefix
+    
+    # find street types
     m = street_type_re.search(name)
     if m:
+        # replace the street types
         name = name.replace(m.group(),mapping[m.group()])
     return name
 
