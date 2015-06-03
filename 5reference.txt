@@ -1,0 +1,4 @@
+https://pypi.python.org/pypi/pymongo/3.0.2
+http://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/
+http://stackoverflow.com/questions/10999023/proper-way-to-import-json-file-to-mongo
+http://blog.csdn.net/fsw0723/article/details/17040999
